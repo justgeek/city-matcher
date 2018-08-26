@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CityMatcherListComponent /> render() renders CityMatcherListComponent 1`] = `
+<div
+  className="sc-htpNat fczHYf"
+>
+  <table
+    className="uk-table uk-table-divider uk-table-striped"
+  >
+    <tbody>
+      <CityRowComponent
+        activateRow={[MockFunction]}
+        autoCompleteResults={
+          Array [
+            Object {
+              "admin_area": "Some Admin Area",
+              "id": 1,
+              "name": "Some City",
+            },
+          ]
+        }
+        city={
+          Object {
+            "admin_area": "Some Admin Area",
+            "id": 1,
+            "name": "Some City",
+          }
+        }
+        index={0}
+        isActive={false}
+        key="0"
+        logCity={[MockFunction]}
+        onCityInputChange={[MockFunction]}
+        onCityInputFocus={[MockFunction]}
+      />
+    </tbody>
+  </table>
+</div>
+`;

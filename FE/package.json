@@ -12,7 +12,9 @@
   "author": "Mohamed Taher",
   "license": "ISC",
   "devDependencies": {
+    "@types/cheerio": "^0.22.9",
     "@types/jest": "^23.3.1",
+    "@types/node": "^10.9.2",
     "awesome-typescript-loader": "^5.2.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

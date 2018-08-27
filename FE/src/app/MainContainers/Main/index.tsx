@@ -2,13 +2,8 @@ import { NavLink, Switch, Route } from "react-router-dom";
 import * as React from "react";
 import { RouteType, appRoutes } from "../../Config/routes.config";
 import HeaderComponent from "CommonComponents/HeaderComponent";
-import styled from "styled-components";
+import { StyledMain } from "./styles";
 
-const MainStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
 export default class Main extends React.PureComponent {
   private renderRoute = (route: RouteType, index: number) => {
     return (
@@ -17,10 +12,10 @@ export default class Main extends React.PureComponent {
   }
   render() {
     return (
-      <MainStyle>
+      <StyledMain>
         <HeaderComponent />
         <Switch>{appRoutes.map(this.renderRoute)}</Switch>
-      </MainStyle>
+      </StyledMain>
     );
   }
 }

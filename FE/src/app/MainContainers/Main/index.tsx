@@ -7,7 +7,13 @@ import { StyledMain } from "./styles";
 export default class Main extends React.PureComponent {
   private renderRoute = (route: RouteType, index: number) => {
     return (
-      <Route exact path={route.path} component={route.component} key={index} />
+      <Route
+        exact
+        path={route.path}
+        component={route.component}
+        key={index}
+        history={history}
+      />
     );
   }
   render() {

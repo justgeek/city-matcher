@@ -21,6 +21,7 @@ describe("<CityMatcherListComponent />", () => {
           activateRow={activateRow}
           logCity={logCity}
           currentActiveRow={1}
+          currentQueryPage={8}
         />
       );
       const component = wrapper.dive();

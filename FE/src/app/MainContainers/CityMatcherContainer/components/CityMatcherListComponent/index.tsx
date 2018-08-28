@@ -12,7 +12,9 @@ interface Props {
   activateRow: (index) => void;
   logCity: ({ cityLog }: logCityPayload) => void;
   currentActiveRow: number | null;
+  currentQueryPage: number | null;
 }
+export const NUMBER_OF_RESULTS = 10; // how many results are shown per page;
 
 // Component DOM
 export default class CityMatcherListComponent extends React.PureComponent<
@@ -42,12 +44,23 @@ export default class CityMatcherListComponent extends React.PureComponent<
       />
     );
   }
+
+  private sliceCitiesPerPage(cities, page) {
+    const startOfSlice = (page - 1) * NUMBER_OF_RESULTS;
+    const endOfSlice = startOfSlice + NUMBER_OF_RESULTS + 1;
+
+    return cities.slice(startOfSlice, endOfSlice);
+  }
   render() {
-    const { cities } = this.props;
+    const { cities, currentQueryPage } = this.props;
     return (
       <StyledCityMatcherComponent>
         <table className="uk-table uk-table-divider uk-table-striped">
-          <tbody>{cities.map(this.renderCityRow)}</tbody>
+          <tbody>
+            {this.sliceCitiesPerPage(cities, currentQueryPage).map(
+              this.renderCityRow
+            )}
+          </tbody>
         </table>
       </StyledCityMatcherComponent>
     );

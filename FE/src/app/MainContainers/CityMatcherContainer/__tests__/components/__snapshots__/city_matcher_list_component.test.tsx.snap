@@ -7,33 +7,7 @@ exports[`<CityMatcherListComponent /> render() renders CityMatcherListComponent 
   <table
     className="uk-table uk-table-divider uk-table-striped"
   >
-    <tbody>
-      <CityRowComponent
-        activateRow={[MockFunction]}
-        autoCompleteResults={
-          Array [
-            Object {
-              "admin_area": "Some Admin Area",
-              "id": 1,
-              "name": "Some City",
-            },
-          ]
-        }
-        city={
-          Object {
-            "admin_area": "Some Admin Area",
-            "id": 1,
-            "name": "Some City",
-          }
-        }
-        index={0}
-        isActive={false}
-        key="0"
-        logCity={[MockFunction]}
-        onCityInputChange={[MockFunction]}
-        onCityInputFocus={[MockFunction]}
-      />
-    </tbody>
+    <tbody />
   </table>
 </div>
 `;

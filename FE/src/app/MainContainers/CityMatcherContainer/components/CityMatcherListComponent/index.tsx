@@ -47,9 +47,9 @@ export default class CityMatcherListComponent extends React.PureComponent<
 
   private sliceCitiesPerPage(cities, page) {
     const startOfSlice = (page - 1) * NUMBER_OF_RESULTS;
-    const endOfSlice = startOfSlice + NUMBER_OF_RESULTS + 1;
-
-    return cities.slice(startOfSlice, endOfSlice);
+    const endOfSlice = startOfSlice + NUMBER_OF_RESULTS;
+    // If no query is entered, return all results
+    return page ? cities.slice(startOfSlice, endOfSlice) : cities;
   }
   render() {
     const { cities, currentQueryPage } = this.props;

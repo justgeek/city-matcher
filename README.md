@@ -1,4 +1,4 @@
-# XING CITY MATCHER
+# CITY MATCHER
 
 #Getting Started
 

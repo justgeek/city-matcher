@@ -23,9 +23,6 @@
   productivity I used UIKit ( a neat UI framework), I like it for its contrast
   and clarity
 
-#Challenges
-
-- Very Tight time => Busy whole week with new app version release
 
 #What could have been done better
 
